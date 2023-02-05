@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<title>Anshio's CSS LAB-4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      background-color: #04AA6D;
+      color: white;
+    }  
+
+    * {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: green;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+h1{
+       margin: auto;
+       width: 400px;
+       background: none;
+    }
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: circle;
+}
+
+.pagination a {
+  color: black;
+  float: right;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+</style>
+</head>
+<body>
+  <h1>Customer <b>Details</b></h1>
+  <form>
+    <label for="show">show</label>
+    <select>
+    <option value="0">5</option></select>
+      <label for="entries">entries  </label>
+    </form>
+<div class="topnav">
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div> <br>
+  <table id="customers" class="table2" style="width:100%">
+    <tr>
+      <th>#</th>
+      <th>Name <i class="fa fa-sort"></i></th>
+      <th>Address</th>
+      <th>City <i class="fa fa-sort"></i></th>
+      <th>Pincode</th>
+      <th>Country <i class="fa fa-sort"></i></th>
+      <th>Actions</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Alfreds Futterkiste</td>
+      <td>1440 Hillhaven Drive</td>
+      <td>California(CA)</td>
+      <td align="center">90028</td>
+      <td align="center">USA</td>
+      <td align="center">
+        <i class="fa fa-eye" style="color:blue;"></i>
+        <i class="fa fa-edit" style="color:yellow;"></i>
+        <i class="fa fa-trash-o fa-lg" style="color:red;"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jared O Hall</td>
+      <td>3341 Colony Street</td>
+      <td>Connecticut(CT)</td>
+      <td align="center">06851</td>
+      <td align="center">USA</td>
+      <td align="center">
+        <i class="fa fa-eye" style="color:blue;"></i>
+        <i class="fa fa-edit" style="color:yellow;"></i>
+        <i class="fa fa-trash-o fa-lg" style="color:red;"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Andrew J Fishel</td>
+      <td>03600 Sierra Villages</td>
+      <td>Maryland</td>
+      <td align="center">34156</td>
+      <td align="center">USA</td>
+      <td align="center">
+        <i class="fa fa-eye" style="color:blue;"></i>
+        <i class="fa fa-edit" style="color:yellow;"></i>
+        <i class="fa fa-trash-o fa-lg" style="color:red;"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Velma S Hunter</td>
+      <td>98686 Elenora Underpass</td>
+      <td>New Jersey</td>
+      <td align="center">63588</td>
+      <td align="center">USA</td>
+      <td align="center">
+        <i class="fa fa-eye" style="color:blue;"></i>
+        <i class="fa fa-edit" style="color:yellow;"></i>
+        <i class="fa fa-trash-o fa-lg" style="color:red;"></i>
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Amy J Martinez</td>
+      <td>Kiarra Ports, Suite 816</td>
+      <td>Kansas</td>
+      <td align="center">15887</td>
+      <td align="center">USA</td>
+      <td align="center">
+        <i class="fa fa-eye" style="color:blue;"></i>
+        <i class="fa fa-edit" style="color:yellow;"></i>
+        <i class="fa fa-trash-o fa-lg" style="color:red;"></i>
+      </td>
+    </tr> 
+  </table><br>
+  <p>Showing <b>5</b> out of <b>25</b> entries</p>
+  <div class="pagination">                                                  
+    <a href="#">Previous</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a class="active" href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">Next</a>
+  </div>
+  </body>
+</html>
